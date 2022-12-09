@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border-style: solid; */
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    color: white;
+    padding: 0.5em;
+}
+
+nav {
+    padding: 1.5em;
+    margin-right: 2em;
+}
+
+
+li {
+    list-style: none;
+}
+
+main {
+    flex: 1;
+    padding: 1.5em;
+}
+
+
+footer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    background-color: purple;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
