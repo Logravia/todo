@@ -31,7 +31,24 @@ main {
     flex: 1;
     padding: 1.5em;
 }
+.task-desc-box {
+    padding: 10px;
+}
 
+.task {
+    padding: 16px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+}
+
+.task-desc {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
 
 footer {
     display: flex;
