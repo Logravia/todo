@@ -1,0 +1,7 @@
+* Inbox
+** TODO Reveal info on hover
+** TODO Allow tasks to be finished
+** TODO Allow tasks removed
+** TODO Allow tasks to be filtered
+** TODO Allow tasks to be edited
+** TODO Adjust padding and margins
