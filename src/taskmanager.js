@@ -2,7 +2,6 @@ import { isToday, isTomorrow, isThisWeek, isThisMonth} from 'date-fns'
 
 class TaskManager {
   #tasks;
-  #dateFormat = "dd-MM-yyyy"
 
   constructor (){
     this.#tasks = [];
