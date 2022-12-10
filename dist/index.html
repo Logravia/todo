@@ -30,19 +30,22 @@
         </ul>
       </nav>
       <main>
-
-
-        <h2>Tasks</h2>
-        <div class="tasks">
+        <h2>New</h2>
         <div class="task-create">
-          <input type="text" name="task-name" value="" />
-          <input type="date" name="due-date" value="" />
+          <label for="task-name">Name: </label>
+          <input type="text" name="task-name" id="task-name" value="" />
+          <label for="due-date">Due: </label>
+          <input type="date" name="due-date" id="due-date" value="" />
+          <label for="project-select">Projects: </label>
           <select name="projects" id="project-select">
             <option value="">--Please choose an option--</option>
             <option value="area51">Area 51</option>
           </select>
           <div class="button">+</div>
         </div>
+
+        <div class="tasks">
+        <h2>Tasks</h2>
         </div>
         <h2>Done</h2>
         <div class="done"></div>

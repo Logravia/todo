@@ -14,7 +14,7 @@ header {
     align-items: center;
     background-color: purple;
     color: white;
-    padding: 0.5em;
+    padding: 0.7em;
 }
 
 nav {
@@ -37,7 +37,9 @@ main {
 }
 
 .tasks {
+
 }
+
 .task-desc-box {
     padding: 10px;
 }
@@ -54,6 +56,7 @@ main {
 
 [name="task-name"], [name="due-date"], [name="projects"] {
     margin-right: 20px;
+    margin-left: 10px;
 }
 
 [name="task-name"]{
@@ -63,6 +66,7 @@ main {
 
 .task-create {
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .task-desc {
