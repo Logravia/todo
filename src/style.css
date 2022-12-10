@@ -35,17 +35,34 @@ main {
     flex: 1;
     padding: 1.5em;
 }
+
+.tasks {
+}
 .task-desc-box {
     padding: 10px;
 }
 
-.task {
+.task, .task-create {
     padding: 16px;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 4px;
+}
+
+
+[name="task-name"], [name="due-date"], [name="projects"] {
+    margin-right: 20px;
+}
+
+[name="task-name"]{
+    flex: 1;
+    padding: 5px;
+}
+
+.task-create {
+    padding: 20px;
 }
 
 .task-desc {
@@ -69,4 +86,15 @@ footer {
     border-style: solid;
     width: 25px;
     height: 25px;
+}
+
+.task-create > .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background-color: green;
+    color: white;
+    border-color: green;
+    border-radius: 4px;
 }
