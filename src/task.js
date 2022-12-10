@@ -1,7 +1,7 @@
 class Task {
 
   #done;
-  constructor(name, due, priority = "medium", project = "", done = false) {
+  constructor(name, due, project = "", priority="medium", done = false) {
     this.name = name;
     this.due = new Date(due);
     this.priority = priority;

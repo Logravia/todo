@@ -1,11 +1,12 @@
 import "./style.css";
-import {newTaskHTML} from "./taskbox.js"
-import {Task} from "./task.js"
 import {TaskManager} from "./taskmanager.js"
+import {InputManager} from "./controller.js"
+import {Display} from "./display.js"
 
-let task = new Task("Get milk", "2022-12-10");
-newTaskHTML(task);
 
 let manager = new TaskManager()
-manager.add(task);
-console.log(manager.weeksTasks())
+let display = new Display()
+
+let input = new InputManager(manager, display);
+
+input.setUpAddButton();
