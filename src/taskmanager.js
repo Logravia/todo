@@ -1,4 +1,4 @@
-import { isToday, isTomorrow, isThisWeek, isThisMonth} from 'date-fns'
+import { isToday, isTomorrow, isThisWeek, isThisMonth, isPast} from 'date-fns'
 
 class TaskManager {
   #tasks;
@@ -26,6 +26,12 @@ class TaskManager {
   }
   monthsTasks() {
     return this.#tasks.filter((task)=>isThisMonth(task.due));
+  }
+  projectTasks(name) {
+    return this.#tasks.filter((task)=>task.project == name);
+  }
+  overdueTasks() {
+    return this.#tasks.filter((task)=>isPast(task.due));
   }
 }
 
