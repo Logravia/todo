@@ -1,5 +1,9 @@
+import { isToday, isTomorrow, isThisWeek, isThisMonth} from 'date-fns'
+
 class TaskManager {
   #tasks;
+  #dateFormat = "dd-MM-yyyy"
+
   constructor (){
     this.#tasks = [];
   }
@@ -12,16 +16,18 @@ class TaskManager {
   taskArray() {
     return this.#tasks;
   }
-  todaysTask(){
-
+  todaysTasks(){
+    return this.#tasks.filter((task)=>isToday(task.due));
   }
   tomorrowsTasks() {
-
+    return this.#tasks.filter((task)=>isTomorrow(task.due));
   }
   weeksTasks() {
-
+    return this.#tasks.filter((task)=>isThisWeek(task.due));
   }
   monthsTasks() {
-
+    return this.#tasks.filter((task)=>isThisMonth(task.due));
   }
 }
+
+export {TaskManager}
