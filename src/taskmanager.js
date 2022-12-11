@@ -10,8 +10,19 @@ class TaskManager {
     this.#tasks.push(task);
   }
   remove(id){
-    this.#tasks.splice(id,1);
+    let location = this.#tasks.findIndex(task=>task.id == id);
+    this.#tasks.splice(location,1);
   }
+
+  finishTask(id) {
+    let task = this.#tasks.find(task=>task.id == id);
+    task.toggleDone();
+  }
+
+  getTask(id){
+    return this.#tasks.find(task=>task.id == id);
+  }
+
   taskArray() {
     return this.#tasks;
   }
