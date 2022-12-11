@@ -53,6 +53,10 @@ main {
     border-radius: 4px;
 }
 
+.task {
+    flex: 1;
+}
+
 
 [name="task-name"], [name="due-date"], [name="projects"] {
     margin-right: 20px;
@@ -86,10 +90,20 @@ footer {
     width: 100%;
 }
 
-.button {
+.checkbox, .button {
     border-style: solid;
     width: 25px;
     height: 25px;
+}
+
+.delete-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-and-buttons {
+    display: flex;
 }
 
 .task-create > .button {

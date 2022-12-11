@@ -6,7 +6,6 @@ import {Display} from "./display.js"
 
 let manager = new TaskManager()
 let display = new Display()
-
 let input = new InputManager(manager, display);
 
 input.setUpAddButton();

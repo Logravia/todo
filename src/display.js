@@ -7,8 +7,8 @@ class Display {
   }
 
   show(taskList=[]) {
-    taskList.forEach((task)=>{
-      newTaskHTML(task);
+    taskList.forEach((task, id)=>{
+      newTaskHTML(task, id);
     })
   }
 }
