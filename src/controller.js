@@ -8,6 +8,7 @@ class InputManager {
     this.taskManager = taskManager;
     this.display = display;
     this.toDisplay = "all";
+    this.projectsSelecte = "all-proj"
   }
 
   processInput () {
@@ -16,14 +17,6 @@ class InputManager {
     let proj = input.projectInput.value;
     let task = new Task(name, due, proj);
     this.taskManager.add(task);
-  }
-
-  processEdit (saveBtn){
-    let container = saveBtn.parentElement;
-    let name = container.querySelector("#name-edit").value;
-    let due = container.querySelector("#name-edit").value;
-    let project = container.querySelector("#name-edit").value;
-    let task = new Task(name, due, proj);
   }
 
   cleanUp () {
@@ -36,7 +29,7 @@ class InputManager {
   }
 
   setUpFilterSelectors () {
-    let dateSelectors = nav.querySelectorAll("li");
+    let dateSelectors = nav.querySelectorAll(".dates>li");
     dateSelectors.forEach(selector=>{
       selector.addEventListener("click", (e)=>{
         let prevElement = document.querySelector("#"+this.toDisplay);
@@ -73,7 +66,7 @@ class InputManager {
     checkboxes.forEach((btn)=>{
       btn.addEventListener("click",(e)=>{
         let id = e.target.dataset.id;
-        this.taskManager.finishTask(id);
+        this.taskManager.toggleTask(id);
         this.cleanUp();
       })
     })
@@ -104,7 +97,7 @@ class InputManager {
     editBtns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         let id = e.target.dataset.id;
-        let container = tasks.querySelector("#t" + id)
+        let container = document.querySelector("#t" + id)
 
         if (!this.ongoingEdit() && container.className == "task") {
           this.setUpEditSpace(container, this.taskManager.getTask(id))
@@ -123,6 +116,7 @@ class InputManager {
     this.setUpFilterSelectors()
     this.setUpAddButton();
     this.cleanUp();
+    this.display.highlightFilter(nav.querySelector("#all"));
   }
 
 }

@@ -12,7 +12,7 @@ class TaskManager {
     this.#tasks.splice(location,1);
   }
 
-  finishTask(id) {
+  toggleTask(id) {
     let task = this.#tasks.find(task=>task.id == id);
     task.toggleDone();
   }

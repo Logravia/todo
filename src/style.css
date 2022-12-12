@@ -124,3 +124,7 @@ footer {
 	border-radius: 5px;
 	padding: 4px;
 }
+
+.new-project-container{
+    display: flex;
+}

@@ -1,8 +1,7 @@
-import {tasks} from "./selectors";
 import { format } from 'date-fns';
 
 const newTaskHTML = (task) =>{
-  tasks.appendChild(newTaskDescBox(task));
+  return newTaskDescBox(task);
 }
 
 const newTaskDescBox = (task) => {

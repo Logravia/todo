@@ -1,4 +1,4 @@
-import { isToday, isTomorrow, isThisWeek, isThisMonth, isPast, addHours } from 'date-fns'
+import { isToday, isTomorrow, isThisWeek, isThisMonth, isPast, isThisYear, addHours } from 'date-fns'
 
 const all = (tasks) => {
   return tasks;
@@ -22,6 +22,7 @@ const year = (tasks) => {
 }
 
 const project = (tasks, projName) => {
+  if (projName == "all-proj") {return tasks;}
   return tasks.filter((task) => task.project == projName);
 }
 const overdue = (tasks) => {
