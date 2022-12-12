@@ -5,3 +5,5 @@
 ** TODO Allow tasks to be filtered
 ** DONE Allow tasks to be edited
 ** TODO Adjust padding and margins
+** TODO Make sure Tasks h2 stays
+** TODO Style finished tasks
