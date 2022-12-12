@@ -1,12 +1,13 @@
-import {input, tasks} from "./selectors.js"
+import {input, tasks, nav} from "./selectors.js"
 import {Task} from "./task.js"
 import {newTaskEdit} from "./taskbox.js"
+import {filter} from "./filter.js"
 
 class InputManager {
   constructor (taskManager, display) {
     this.taskManager = taskManager;
     this.display = display;
-    this.setting = undefined;
+    this.toDisplay = "all";
   }
 
   processInput () {
@@ -27,10 +28,22 @@ class InputManager {
 
   cleanUp () {
     this.display.clearTasks()
-    this.display.show(this.taskManager.taskArray());
+    let relevantTasks = filter[this.toDisplay](this.taskManager.taskArray())
+    this.display.show(relevantTasks);
     this.setUpDel();
     this.setUpEdit();
     this.setUpCheckbox();
+  }
+
+  setUpFilterSelectors () {
+    let dateSelectors = nav.querySelectorAll("li");
+    dateSelectors.forEach(selector=>{
+      selector.addEventListener("click", (e)=>{
+        let id = e.currentTarget.id;
+        this.toDisplay = id;
+        this.cleanUp();
+      })
+    });
   }
 
   setUpAddButton () {
@@ -101,6 +114,12 @@ class InputManager {
 
       })
     })
+  }
+
+  setUp () {
+    this.setUpFilterSelectors()
+    this.setUpAddButton();
+    this.cleanUp();
   }
 
 }
