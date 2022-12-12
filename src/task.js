@@ -14,6 +14,10 @@ class Task {
     return this.#done
   }
 
+  updateDate(strDate) {
+    this.due = strDate ? new Date(strDate) : new Date();
+  }
+
   toggleDone = ()=> {
     this.#done = !this.#done;
   }

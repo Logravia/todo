@@ -46,6 +46,8 @@ const newTaskDesc = (task) => {
 const newTaskEdit = (task) => {
   let taskEdit = document.createElement("div");
   taskEdit.className = "task-edit"
+  taskEdit.id = "t" + task.id
+
   taskEdit.innerHTML =
  `  <label for="edit-name">Name: </label>
     <input type="text" name="edit-name" id="edit-name" value="${task.name}" />
@@ -55,7 +57,7 @@ const newTaskEdit = (task) => {
     <select name="projects" id="edit-project">
       <option value="${task.project}">Area 51</option>
     </select>
-    <div class="button" id="save-edit" data-id="task.id">S</div>`;
+    <div class="button" id="save-edit" data-id="${task.id}">S</div>`;
   return taskEdit;
 }
 

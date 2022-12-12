@@ -3,5 +3,5 @@
 ** DONE Allow tasks to be finished
 ** DONE Allow tasks removed
 ** TODO Allow tasks to be filtered
-** TODO Allow tasks to be edited
+** DONE Allow tasks to be edited
 ** TODO Adjust padding and margins

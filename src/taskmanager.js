@@ -23,6 +23,13 @@ class TaskManager {
     return this.#tasks.find(task=>task.id == id);
   }
 
+  updateTask (id, name, due, project) {
+    let task = this.getTask(id);
+    task.name = name;
+    task.updateDate(due);
+    task.project = project;
+  }
+
   taskArray() {
     return this.#tasks;
   }
