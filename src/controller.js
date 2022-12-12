@@ -39,8 +39,11 @@ class InputManager {
     let dateSelectors = nav.querySelectorAll("li");
     dateSelectors.forEach(selector=>{
       selector.addEventListener("click", (e)=>{
-        let id = e.currentTarget.id;
-        this.toDisplay = id;
+        let prevElement = document.querySelector("#"+this.toDisplay);
+        this.display.flattenFilter(prevElement);
+        this.display.highlightFilter(e.currentTarget);
+
+        this.toDisplay = e.currentTarget.id;
         this.cleanUp();
       })
     });

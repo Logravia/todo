@@ -4,6 +4,7 @@ import {newTaskHTML} from "./taskbox.js"
 class Display {
   clearTasks () {
     tasks.textContent = "";
+    tasks.innerHTML = "<h2>Tasks</h2>"
   }
 
   show(taskList=[]) {
@@ -12,6 +13,13 @@ class Display {
     })
   }
 
+  highlightFilter(element) {
+    element.classList.add("selected-filter")
+  }
+
+  flattenFilter(element) {
+    element.classList.remove("selected-filter")
+  }
 
 }
 

@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: purple;
+    background-color: #084a3e;
     color: white;
     padding: 0.7em;
 }
@@ -29,6 +29,7 @@ nav {
 
 li {
     list-style: none;
+    padding: 3px
 }
 
 main {
@@ -85,7 +86,7 @@ footer {
     align-content: center;
     justify-content: center;
     color: white;
-    background-color: purple;
+    background-color: #084a3e;
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -116,4 +117,10 @@ footer {
     color: white;
     border-color: green;
     border-radius: 4px;
+}
+
+.selected-filter {
+	background: #ebb;
+	border-radius: 5px;
+	padding: 4px;
 }
