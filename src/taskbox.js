@@ -60,5 +60,18 @@ const newTaskEdit = (task) => {
   return taskEdit;
 }
 
+const newProjectLi = (name, id) => {
+  let li = document.createElement("li")
+  li.textContent = name;
+  li.dataset.id = id;
+  return li
+}
 
-export {newTaskHTML, newTaskEdit}
+const newOption = (projName) => {
+  let option = document.createElement("option");
+  option.textContent = projName;
+  return option;
+}
+
+
+export {newTaskHTML, newTaskEdit, newProjectLi, newOption}

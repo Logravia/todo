@@ -1,8 +1,10 @@
 class TaskManager {
   #tasks;
+  #projects;
 
   constructor (){
     this.#tasks = [];
+    this.#projects = [];
   }
   add(task) {
     this.#tasks.push(task);
@@ -10,6 +12,21 @@ class TaskManager {
   remove(id){
     let location = this.#tasks.findIndex(task=>task.id == id);
     this.#tasks.splice(location,1);
+  }
+
+  removeProject(project) {
+    let index = this.#projects.findIndex(project)
+    this.#projects.splice(index, 1);
+  }
+
+  addProject(projectName="") {
+    if (!this.#projects.find(proj=>projectName==proj)) {
+      this.#projects.push(projectName);
+    }
+  }
+
+  projectArr() {
+    return this.#projects;
   }
 
   toggleTask(id) {

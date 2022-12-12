@@ -1,6 +1,6 @@
 const tasks = document.querySelector(".tasks")
 const dates = document.querySelector(".dates")
-const projects = document.querySelector(".projects")
+const projects = document.querySelector(".projects>ul")
 const nav = document.querySelector("nav")
 const done = document.querySelector(".done")
 

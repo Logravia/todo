@@ -16,21 +16,24 @@
         <ul>
           <div class="dates">
             <h3>Dates</h3>
-            <li id="all">All tasks</li>
-            <li id="overdue">Overdue</li>
-            <li id="today">Today</li>
-            <li id="tomorrow">Tomorrow</li>
-            <li id="week">Week</li>
-            <li id="month">Month</li>
-            <li id="year">Year</li>
+            <ul>
+              <li id="all">All tasks</li>
+              <li id="overdue">Overdue</li>
+              <li id="today">Today</li>
+              <li id="tomorrow">Tomorrow</li>
+              <li id="week">Week</li>
+              <li id="month">Month</li>
+              <li id="year">Year</li>
+            </ul>
           </div>
           <div class="projects">
             <h3>Projects</h3>
-            <li id="all-proj">Everything</li>
-            <li id="area51">Area 51</li>
+            <ul>
+              <li id="all-proj">Everything</li>
+            </ul>
             <div class="new-project-container">
-              <input type="text" name="new-project" id="new-project" value="" />
-              <div class="button"></div>
+              <input type="text" name="new-project" id="new-project" value=""/>
+              <div class="button" id="new-proj">+</div>
             </div>
           </div>
         </ul>
@@ -45,7 +48,6 @@
           <label for="project-select">Projects: </label>
           <select name="projects" id="project-select">
             <option value="">--Please choose an option--</option>
-            <option value="area51">Area 51</option>
           </select>
           <div class="button" id="add">+</div>
         </div>

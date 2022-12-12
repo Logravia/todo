@@ -14,7 +14,7 @@ class InputManager {
   processInput () {
     let name = input.nameInput.value;
     let due = input.dueInput.value;
-    let proj = input.projectInput.value;
+    let proj = input.projectInput.textContent;
     let task = new Task(name, due, proj);
     this.taskManager.add(task);
   }
@@ -22,14 +22,14 @@ class InputManager {
   cleanUp () {
     this.display.clearTasks()
     let relevantTasks = filter[this.toDisplay](this.taskManager.taskArray())
-    this.display.show(relevantTasks);
+    this.display.show(relevantTasks, this.taskManager.projectArr());
     this.setUpDel();
     this.setUpEdit();
     this.setUpCheckbox();
   }
 
   setUpFilterSelectors () {
-    let dateSelectors = nav.querySelectorAll(".dates>li");
+    let dateSelectors = nav.querySelectorAll(".dates>ul>li");
     dateSelectors.forEach(selector=>{
       selector.addEventListener("click", (e)=>{
         let prevElement = document.querySelector("#"+this.toDisplay);
@@ -55,6 +55,19 @@ class InputManager {
       btn.addEventListener("click",(e)=>{
         let id = e.target.dataset.id;
         this.taskManager.remove(id);
+        this.cleanUp();
+      })
+    })
+
+  }
+
+  setUpNewProjbtn () {
+    let delBtns = document.querySelectorAll("#new-proj");
+    delBtns.forEach((btn)=>{
+      btn.addEventListener("click",(e)=>{
+        let project = document.querySelector("#new-project").value
+        if (project == ""){return;}
+        this.taskManager.addProject(project);
         this.cleanUp();
       })
     })
@@ -115,8 +128,9 @@ class InputManager {
   setUp () {
     this.setUpFilterSelectors()
     this.setUpAddButton();
-    this.cleanUp();
     this.display.highlightFilter(nav.querySelector("#all"));
+    this.setUpNewProjbtn()
+    this.cleanUp();
   }
 
 }
