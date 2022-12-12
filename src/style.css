@@ -44,7 +44,7 @@ main {
     padding: 10px;
 }
 
-.task, .task-create {
+.task, .task-create, .task-edit {
     padding: 16px;
     font-size: 20px;
     display: flex;
@@ -53,17 +53,18 @@ main {
     border-radius: 4px;
 }
 
-.task {
+.task, .task-edit {
     flex: 1;
 }
 
 
-[name="task-name"], [name="due-date"], [name="projects"] {
+[name="task-name"], [name="due-date"], [name="projects"],
+[name="edit-name"], [name="edit-date"], [name="edit-project"]{
     margin-right: 20px;
     margin-left: 10px;
 }
 
-[name="task-name"]{
+[name="task-name"],[name="edit-name"]{
     flex: 1;
     padding: 5px;
 }

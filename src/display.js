@@ -7,10 +7,12 @@ class Display {
   }
 
   show(taskList=[]) {
-    taskList.forEach((task, id)=>{
-      newTaskHTML(task, id);
+    taskList.forEach((task)=>{
+      newTaskHTML(task);
     })
   }
+
+
 }
 
 export {Display}
