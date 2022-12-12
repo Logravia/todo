@@ -1,4 +1,5 @@
 import "./style.css";
+import "@fortawesome/fontawesome-free/js/all.js"
 import {TaskManager} from "./taskmanager.js"
 import {InputManager} from "./controller.js"
 import {Display} from "./display.js"
