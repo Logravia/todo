@@ -1,11 +1,13 @@
 import {tasks, done, projects, input} from "./selectors"
 import {newTaskHTML, newProject, newOption} from "./taskbox.js"
+import {format} from 'date-fns'
 
 class Display {
   clearTasks () {
     tasks.textContent = "";
     done.textContent = "";
     input.projectInput.textContent = "";
+    input.dueInput.value = format(new Date(), "yyyy-MM-dd");
 
     projects.textContent="";
     tasks.innerHTML = '<h2><i class="fa-solid fa-list"></i> Tasks</h2>'

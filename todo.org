@@ -6,28 +6,17 @@
 ** DONE Allow tasks to be edited
 ** DONE Adjust padding and margins
 ** DONE Make sure Tasks h2 stays
-** TODO Use more icons
-Icons:
-<i class="fa-solid fa-check"></i>
-<i class="fa-solid fa-xmark"></i>
-<i class="fa-solid fa-bomb"></i>
-<i class="fa-solid fa-plus"></i>
-<i class="fa-regular fa-calendar"></i>
-<i class="fa-regular fa-square"></i>
-<i class="fa-regular fa-square-check"></i>
-<i class="fa-solid fa-trash-can"></i>
-<i class="fa-solid fa-file-lines"></i>
-<i class="fa-regular fa-square-plus"></i>
-** TODO Have default date in the input area
+** DONE Use more icons
+** DONE Have default date in the input area
+** TODO Format the date shown in description
 ** TODO Style new project input
-** TODO Replace divs with buttons
+** DONE Replace divs with buttons
 ** TODO Forbid empty tasks from being added
 ** TODO Style finished tasks
 ** TODO Deal with footer always being at the bottom
-** TODO Make footer thicker
 ** TODO Add more green colors
-** TODO Style delete,add,edit with font-awesome
+** DONE Style delete,add,edit with font-awesome
 ** TODO Add/remove priorities
 ** TODO Add :hover styles to projects and dates
-** TODO Wire up project-delete button to a function
+** TODO Wire up project-delete button to a method
 ** TODO Add localstorage support
