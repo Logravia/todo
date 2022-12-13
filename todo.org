@@ -11,8 +11,8 @@
 ** DONE Format the date shown in description
 ** DONE Style new project input
 ** DONE Replace divs with buttons
-** TODO Forbid empty tasks from being added
-** TODO Style finished tasks
+** DONE Forbid empty tasks from being added
+** DONE Style finished tasks
 ** TODO Deal with footer always being at the bottom
 ** TODO Add more green colors
 ** DONE Style delete,add,edit with font-awesome

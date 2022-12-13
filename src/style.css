@@ -166,3 +166,9 @@ button {
     gap: 10px;
     justify-content: space-between;
 }
+
+.done .task {
+    background-color: #d8d8d8;
+    padding: 10px;
+    text-decoration-line: line-through;
+}

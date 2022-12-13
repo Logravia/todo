@@ -13,10 +13,14 @@ class InputManager {
 
   processInput () {
     let name = input.nameInput.value;
-    let due = input.dueInput.value;
-    let proj = input.projectInput.value;
-    let task = new Task(name, due, proj);
-    this.taskManager.add(task);
+    if (name) {
+      let due = input.dueInput.value;
+      let proj = input.projectInput.value;
+      let task = new Task(name, due, proj);
+      this.taskManager.add(task);
+    } else {
+      alert("Please enter a name");
+    }
   }
 
   cleanUp () {
