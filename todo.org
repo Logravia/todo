@@ -1,5 +1,5 @@
 * Inbox
-** TODO Reveal info on hover
+** DONE Reveal info on hover
 ** DONE Allow tasks to be finished
 ** DONE Allow tasks removed
 ** DONE Allow tasks to be filtered

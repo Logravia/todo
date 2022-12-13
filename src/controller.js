@@ -26,6 +26,7 @@ class InputManager {
     this.setUpDel();
     this.setUpEdit();
     this.setUpCheckbox();
+    this.setUpTaskHover();
   }
 
   setUpFilterSelectors () {
@@ -123,6 +124,26 @@ class InputManager {
 
       })
     })
+  }
+
+  setUpTaskHover = () => {
+    let taskDescBoxes = tasks.querySelectorAll(".task-desc-box");
+    taskDescBoxes.forEach(b=>{
+      b.addEventListener("mouseenter", (e)=>{
+        let description = e.currentTarget.querySelector(".task-desc")
+        description.classList.remove("visuallyhidden");
+      })
+      b.addEventListener("mouseleave", (e)=>{
+        console.log(e.currentTarget)
+        let description = e.currentTarget.querySelector(".task-desc")
+        description.classList.add("visuallyhidden");
+      })
+    })
+
+  }
+
+  getTasksDescriptionEl = (taskEl) => {
+
   }
 
   setUp () {

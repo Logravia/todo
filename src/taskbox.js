@@ -32,7 +32,7 @@ const newTaskBox = (task) => {
 
 const newTaskDesc = (task) => {
   let taskDesc = document.createElement("div")
-  taskDesc.className = "task-desc"
+  taskDesc.className = "task-desc visuallyhidden"
 
   taskDesc.innerHTML = `
     <p class="description">Due: ${task.due}</p>
