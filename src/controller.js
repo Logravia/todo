@@ -30,7 +30,7 @@ class InputManager {
     this.setUpDel();
     this.setUpEdit();
     this.setUpCheckbox();
-    this.setUpTaskHover();
+    this.setUpDelProjBtn();
   }
 
   setUpFilterSelectors () {
@@ -63,7 +63,17 @@ class InputManager {
         this.cleanUp();
       })
     })
+  }
 
+  setUpDelProjBtn = () => {
+    let btns = document.querySelectorAll(".delProj");
+    btns.forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        let id = e.currentTarget.dataset.id
+        this.taskManager.removeProject(id);
+        this.cleanUp();
+      })
+    })
   }
 
   setUpNewProjbtn () {
@@ -116,7 +126,6 @@ class InputManager {
       btn.addEventListener("click", (e) => {
         let id = e.target.dataset.id;
         let container = document.querySelector("#t" + id)
-        console.log(e.target);
 
         if (!this.ongoingEdit() && container.className == "task") {
           this.setUpEditSpace(container, this.taskManager.getTask(id))
@@ -139,15 +148,10 @@ class InputManager {
         description.classList.remove("visuallyhidden");
       })
       b.addEventListener("mouseleave", (e)=>{
-        console.log(e.currentTarget)
         let description = e.currentTarget.querySelector(".task-desc")
         description.classList.add("visuallyhidden");
       })
     })
-
-  }
-
-  getTasksDescriptionEl = (taskEl) => {
 
   }
 
@@ -156,6 +160,8 @@ class InputManager {
     this.setUpAddButton();
     this.display.highlightFilter(nav.querySelector("#all"));
     this.setUpNewProjbtn()
+    this.setUpDelProjBtn()
+    this.setUpTaskHover();
     this.cleanUp();
   }
 

@@ -14,9 +14,9 @@ class TaskManager {
     this.#tasks.splice(location,1);
   }
 
-  removeProject(project) {
-    let index = this.#projects.findIndex(project)
-    this.#projects.splice(index, 1);
+  removeProject(id) {
+    if (id == 0) {return}
+    this.#projects.splice(id, 1);
   }
 
   addProject(projectName="") {
