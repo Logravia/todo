@@ -13,9 +13,9 @@
 ** DONE Replace divs with buttons
 ** DONE Forbid empty tasks from being added
 ** DONE Style finished tasks
-** TODO Deal with footer always being at the bottom
-** TODO Add more green colors
 ** DONE Style delete,add,edit with font-awesome
+** DONE Deal with footer always being at the bottom
+** TODO Add more green colors
 ** TODO Add/remove priorities
 ** TODO Add :hover styles to projects and dates
 ** TODO Wire up project-delete button to a method

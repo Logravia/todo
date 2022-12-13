@@ -8,8 +8,15 @@ button > * {
   pointer-events: none;
 }
 
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .flex {
     display: flex;
+    flex: 1;
 }
 
 h2, h3 {
@@ -104,8 +111,6 @@ footer {
     justify-content: center;
     color: white;
     background-color: #084a3e;
-    position: absolute;
-    bottom: 0px;
     width: 100%;
 }
 
