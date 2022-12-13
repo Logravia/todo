@@ -1,5 +1,7 @@
 import { format } from 'date-fns';
 
+const dateFormat = "yyyy-MM-dd";
+
 const newTaskHTML = (task) =>{
   return newTaskDescBox(task);
 }
@@ -51,7 +53,7 @@ const newTaskDesc = (task) => {
   taskDesc.className = "task-desc visuallyhidden"
 
   taskDesc.innerHTML = `
-    <p class="description">Due: ${task.due}</p>
+    <p class="description">Due: ${format(task.due, dateFormat)}</p>
     <p class="priority">Priority: ${task.priority}</p>
     <p class="project">Project: ${task.project}</p>
   `
