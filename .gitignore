@@ -11,8 +11,8 @@ yarn-error.log*
 *.tsbuildinfo
 .npm
 .eslintcache
-.ttf
-.eot
-.svg
-.woff
-.woff2
+*.ttf
+*.eot
+*.svg
+*.woff
+*.woff2
