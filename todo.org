@@ -4,7 +4,7 @@
 ** DONE Allow tasks removed
 ** DONE Allow tasks to be filtered
 ** DONE Allow tasks to be edited
-** TODO Adjust padding and margins
+** DONE Adjust padding and margins
 ** DONE Make sure Tasks h2 stays
 ** TODO Use more icons
 Icons:

@@ -8,6 +8,11 @@
     display: flex;
 }
 
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+
 header {
     display: flex;
     justify-content: center;
@@ -127,6 +132,7 @@ footer {
 
 .new-project-container{
     display: flex;
+    margin-top: 15px;
 }
 
 button {
