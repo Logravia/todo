@@ -128,3 +128,13 @@ footer {
 .new-project-container{
     display: flex;
 }
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.proj-and-del {
+    display: flex;
+    justify-content: space-between;
+}

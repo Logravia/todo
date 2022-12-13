@@ -1,11 +1,11 @@
 import {tasks, done, projects, input} from "./selectors"
-import {newTaskHTML, newProjectLi, newOption} from "./taskbox.js"
+import {newTaskHTML, newProject, newOption} from "./taskbox.js"
 
 class Display {
   clearTasks () {
     tasks.textContent = "";
     done.textContent = "";
-    input.projectInput.innerHTML = `<option value="">--Please choose an option--</option>`;
+    input.projectInput.textContent = "";
 
     projects.textContent="";
     tasks.innerHTML = "<h2>Tasks</h2>"
@@ -21,9 +21,9 @@ class Display {
         done.appendChild(taskHTML);
       }
     })
-    console.log(projectList);
-    projectList.forEach(proj=>{
-      projects.appendChild(newProjectLi(proj));
+
+    projectList.forEach((proj, id)=>{
+      projects.appendChild(newProject(proj, id));
       input.projectInput.appendChild(newOption(proj));
     });
   }

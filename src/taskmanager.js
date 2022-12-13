@@ -4,7 +4,7 @@ class TaskManager {
 
   constructor (){
     this.#tasks = [];
-    this.#projects = [];
+    this.#projects = ["Default"];
   }
   add(task) {
     this.#tasks.push(task);

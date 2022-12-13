@@ -60,11 +60,15 @@ const newTaskEdit = (task) => {
   return taskEdit;
 }
 
-const newProjectLi = (name, id) => {
-  let li = document.createElement("li")
-  li.textContent = name;
-  li.dataset.id = id;
-  return li
+const newProject = (name, id) => {
+  let container = document.createElement("div");
+  container.className = "proj-and-del";
+  container.innerHTML = `
+  <li>${name}</li>
+  <button data-id="${id}" type="button"><i class="fa-solid fa-xmark"></i></button>
+  `
+
+  return container
 }
 
 const newOption = (projName) => {
@@ -74,4 +78,4 @@ const newOption = (projName) => {
 }
 
 
-export {newTaskHTML, newTaskEdit, newProjectLi, newOption}
+export {newTaskHTML, newTaskEdit, newProject, newOption}
