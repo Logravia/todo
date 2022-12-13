@@ -83,7 +83,7 @@ const newProject = (name, id) => {
   container.className = "proj-and-del";
   container.innerHTML = `
   <li>${name}</li>
-  <button data-id="${id}" type="button"><i class="fa-solid fa-xmark"></i></button>
+  <button data-id="${id}" type="button"><i class="fa-solid fa-xmark fa-lg"></i></button>
   `
 
   return container

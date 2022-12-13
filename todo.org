@@ -8,8 +8,8 @@
 ** DONE Make sure Tasks h2 stays
 ** DONE Use more icons
 ** DONE Have default date in the input area
-** TODO Format the date shown in description
-** TODO Style new project input
+** DONE Format the date shown in description
+** DONE Style new project input
 ** DONE Replace divs with buttons
 ** TODO Forbid empty tasks from being added
 ** TODO Style finished tasks

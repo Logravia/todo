@@ -144,6 +144,7 @@ button {
 .proj-and-del {
     display: flex;
     justify-content: space-between;
+    padding-right: 4px;
 }
 
 
@@ -160,3 +161,8 @@ button {
   overflow: hidden;
 }
 
+.new-project-container {
+    padding: 3px;
+    gap: 10px;
+    justify-content: space-between;
+}
