@@ -112,6 +112,7 @@ class InputManager {
       btn.addEventListener("click", (e) => {
         let id = e.target.dataset.id;
         let container = document.querySelector("#t" + id)
+        console.log(e.target);
 
         if (!this.ongoingEdit() && container.className == "task") {
           this.setUpEditSpace(container, this.taskManager.getTask(id))

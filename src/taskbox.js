@@ -12,20 +12,36 @@ const newTaskDescBox = (task) => {
   return taskDescBox;
 }
 
+const checkedUnchecked = (done) => {
+ if (done) {
+  return '<i class="fa-regular fa-square-check fa-xl"></i>'
+ } else {
+   return  '<i class="fa-regular fa-square fa-xl"></i>'
+ }
+}
+
 const newTaskBox = (task) => {
   let container = document.createElement("div")
   container.className = "task-and-buttons";
   container.innerHTML = `
   <div class="task" id="t${task.id}">
     <p>${task.name}</p>
-    <div class="checkbox" data-id=${task.id}></div>
-  </div>
-
-  <div class="delete-edit">
-    <div class="deleteBtn button" data-id="${task.id}">D</div>
-    <div class="editBtn button" data-id="${task.id}">E</div>
+    <button type="button" class="checkbox" data-id=${task.id}>${checkedUnchecked(task.done)}</button>
   </div>
   `
+
+  if (!task.done) {
+    container.innerHTML += `
+  <div class="delete-edit">
+    <button type="button" class="deleteBtn" data-id="${task.id}"> <i class="fa-solid fa-trash fa-xl"></i> </button>
+    <button type="button" class="editBtn" data-id="${task.id}"> <i class="fa-solid fa-pen fa-xl"></i> </button>
+  </div>`
+  } else {
+    container.innerHTML += `
+  <div class="delete-edit">
+    <button type="button" class="deleteBtn" data-id="${task.id}"> <i class="fa-solid fa-trash fa-xl"></i> </button>
+  </div>`
+  }
 
   return container;
 }
@@ -56,7 +72,7 @@ const newTaskEdit = (task) => {
     <select name="projects" id="edit-project">
       <option value="${task.project}">Area 51</option>
     </select>
-    <div class="button" id="save-edit" data-id="${task.id}">S</div>`;
+    <button type="button" id="save-edit" data-id="${task.id}"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>`;
   return taskEdit;
 }
 

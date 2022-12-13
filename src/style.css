@@ -4,6 +4,10 @@
     /* border-style: solid; */
 }
 
+button > * {
+  pointer-events: none;
+}
+
 .flex {
     display: flex;
 }
@@ -60,7 +64,15 @@ main {
 }
 
 .task, .task-edit {
+    flex: 15;
+}
+
+.delete-edit {
     flex: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 10px;
 }
 
 
@@ -97,31 +109,20 @@ footer {
     width: 100%;
 }
 
-.checkbox, .button {
-    border-style: solid;
-    width: 25px;
-    height: 25px;
-}
-
-.delete-edit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .task-and-buttons {
     display: flex;
 }
 
-.task-create > .button {
+.new-task-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 30px;
     background-color: green;
     color: white;
     border-color: green;
     border-radius: 4px;
+    padding: 4px;
 }
 
 .selected-filter {
@@ -158,3 +159,4 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+

@@ -8,8 +8,8 @@ class Display {
     input.projectInput.textContent = "";
 
     projects.textContent="";
-    tasks.innerHTML = "<h2>Tasks</h2>"
-    done.innerHTML = "<h2>Done</h2>"
+    tasks.innerHTML = '<h2><i class="fa-solid fa-list"></i> Tasks</h2>'
+    done.innerHTML = '<h2><i class="fa-solid fa-check-double"></i> Done</h2>'
   }
 
   show(taskList=[], projectList=[]) {
