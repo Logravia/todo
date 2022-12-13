@@ -8,6 +8,12 @@ button > * {
   pointer-events: none;
 }
 
+nav li:hover, .selected-filter {
+    background-color: #084a3e8c;
+    color: white;
+	border-radius: 5px;
+}
+
 html, body {
     display: flex;
     flex-direction: column;
@@ -46,7 +52,8 @@ nav {
 
 li {
     list-style: none;
-    padding: 3px
+    padding: 3px;
+    margin-bottom: 2px;
 }
 
 main {
@@ -134,12 +141,6 @@ footer {
     padding: 4px;
 }
 
-.selected-filter {
-	background: #084a3e8c;
-	border-radius: 5px;
-	padding: 4px;
-    color: white;
-}
 
 .new-project-container{
     display: flex;

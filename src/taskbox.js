@@ -54,7 +54,6 @@ const newTaskDesc = (task) => {
 
   taskDesc.innerHTML = `
     <p class="description">Due: ${format(task.due, dateFormat)}</p>
-    <p class="priority">Priority: ${task.priority}</p>
     <p class="project">Project: ${task.project}</p>
   `
   return taskDesc;
@@ -72,7 +71,6 @@ const newTaskEdit = (task) => {
     <input type="date" name="edit-date" id="edit-date" value="${format(task.due, "yyyy-MM-dd")}" />
     <label for="edit-project">Projects: </label>
     <select name="projects" id="edit-project">
-      <option value="${task.project}">Area 51</option>
     </select>
     <button type="button" id="save-edit" data-id="${task.id}"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>`;
   return taskEdit;
