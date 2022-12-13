@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+import {input} from './selectors.js'
 
 const dateFormat = "yyyy-MM-dd";
 
@@ -71,6 +72,7 @@ const newTaskEdit = (task) => {
     <input type="date" name="edit-date" id="edit-date" value="${format(task.due, "yyyy-MM-dd")}" />
     <label for="edit-project">Projects: </label>
     <select name="projects" id="edit-project">
+      ${input.projectInput.innerHTML}
     </select>
     <button type="button" id="save-edit" data-id="${task.id}"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>`;
   return taskEdit;
@@ -81,7 +83,7 @@ const newProject = (name, id) => {
   container.className = "proj-and-del";
   container.innerHTML = `
   <li>${name}</li>
-  <button data-id="${id}" type="button"><i class="fa-solid fa-xmark fa-lg"></i></button>
+  <button data-id="${id}" type="button" class="delProj"><i class="fa-solid fa-xmark fa-lg"></i></button>
   `
 
   return container
