@@ -15,8 +15,12 @@
 ** DONE Style finished tasks
 ** DONE Style delete,add,edit with font-awesome
 ** DONE Deal with footer always being at the bottom
-** TODO Add more green colors
-** TODO Add/remove priorities
-** TODO Add :hover styles to projects and dates
+** DONE Add more green colors
+** DONE Add/remove priorities
+** DONE Add :hover styles to projects and dates
 ** TODO Wire up project-delete button to a method
+*** TODO Add remove project method
+*** TODO Select the buttons, addListeners to them
+*** TODO Call the project remove method
 ** TODO Add localstorage support
+** TODO Fix highlight inconsistency
