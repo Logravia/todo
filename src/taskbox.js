@@ -52,7 +52,6 @@ const newTaskBox = (task) => {
 const newTaskDesc = (task) => {
   let taskDesc = document.createElement("div")
   taskDesc.className = "task-desc visuallyhidden"
-
   taskDesc.innerHTML = `
     <p class="description">Due: ${format(task.due, dateFormat)}</p>
     <p class="project">Project: ${task.project}</p>

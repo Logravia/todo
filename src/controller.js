@@ -31,6 +31,7 @@ class InputManager {
     this.setUpEdit();
     this.setUpCheckbox();
     this.setUpDelProjBtn();
+    this.setUpTaskHover();
   }
 
   setUpFilterSelectors () {
