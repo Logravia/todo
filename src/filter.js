@@ -22,7 +22,7 @@ const year = (tasks) => {
 }
 
 const project = (tasks, projName) => {
-  if (projName == "all-proj") {return tasks;}
+  if (projName == "Default") {return tasks;}
   return tasks.filter((task) => task.project == projName);
 }
 const overdue = (tasks) => {

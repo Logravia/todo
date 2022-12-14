@@ -81,7 +81,7 @@ const newProject = (name, id) => {
   let container = document.createElement("div");
   container.className = "proj-and-del";
   container.innerHTML = `
-  <li>${name}</li>
+  <li id="${name}">${name}</li>
   <button data-id="${id}" type="button" class="delProj"><i class="fa-solid fa-xmark fa-lg"></i></button>
   `
 

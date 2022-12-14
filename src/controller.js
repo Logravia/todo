@@ -1,4 +1,4 @@
-import {input, tasks, nav} from "./selectors.js"
+import {input, tasks, nav, projects as projectList} from "./selectors.js"
 import {Task} from "./task.js"
 import {newTaskEdit} from "./taskbox.js"
 import {filter} from "./filter.js"
@@ -7,8 +7,8 @@ class InputManager {
   constructor (taskManager, display) {
     this.taskManager = taskManager;
     this.display = display;
-    this.toDisplay = "all";
-    this.projectsSelecte = "all-proj"
+    this.dateFilter = "all";
+    this.projectFilter = "Default"
   }
 
   processInput () {
@@ -25,29 +25,45 @@ class InputManager {
 
   cleanUp () {
     this.display.clearTasks()
-    let relevantTasks = filter[this.toDisplay](this.taskManager.taskArray())
+    let relevantTasks = filter[this.dateFilter](this.taskManager.taskArray())
+    relevantTasks = filter.project(relevantTasks, this.projectFilter);
+
     this.display.show(relevantTasks, this.taskManager.projectArr());
     this.setUpDel();
     this.setUpEdit();
     this.setUpCheckbox();
     this.setUpDelProjBtn();
     this.setUpTaskHover();
+    this.setUpProjectSelectors();
+    this.display.highlightFilter(projectList.querySelector("#"+this.projectFilter));
   }
 
-  setUpFilterSelectors () {
+  setUpDateSelectors () {
     let dateSelectors = nav.querySelectorAll(".dates>ul>li");
     dateSelectors.forEach(selector=>{
       selector.addEventListener("click", (e)=>{
-        let prevElement = document.querySelector("#"+this.toDisplay);
+        let prevElement = document.querySelector("#"+this.dateFilter);
         this.display.flattenFilter(prevElement);
         this.display.highlightFilter(e.currentTarget);
 
-        this.toDisplay = e.currentTarget.id;
+        this.dateFilter = e.currentTarget.id;
         this.cleanUp();
       })
     });
   }
 
+  setUpProjectSelectors () {
+    let projects = nav.querySelectorAll(".projects>ul li");
+    projects.forEach(selector=>{
+      selector.addEventListener("click", (e)=>{
+        let prevElement = document.querySelector(".projects>ul li.selected-filter");
+        this.display.flattenFilter(prevElement);
+
+        this.projectFilter = e.currentTarget.textContent;
+        this.cleanUp();
+      })
+    });
+  }
   setUpAddButton () {
     input.addButton.addEventListener("click", ()=>{
       this.processInput();
@@ -157,7 +173,7 @@ class InputManager {
   }
 
   setUp () {
-    this.setUpFilterSelectors()
+    this.setUpDateSelectors()
     this.setUpAddButton();
     this.display.highlightFilter(nav.querySelector("#all"));
     this.setUpNewProjbtn()

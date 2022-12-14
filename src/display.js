@@ -28,6 +28,7 @@ class Display {
       projects.appendChild(newProject(proj, id));
       input.projectInput.appendChild(newOption(proj));
     });
+
   }
 
   highlightFilter(element) {
